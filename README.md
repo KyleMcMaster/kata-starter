@@ -1,2 +1,8 @@
 # kata-starter
-Kata template for Xunit, NSubstitute, and Fluent Assertions to promote TDD exercises.
+Kata template for C# .Net Core 3.0 to promote TDD exercises.
+
+## Packages
+- AutoFixture.AutoNSubstitute
+- AutoFixture.Xunit2
+- FluentAssertions
+- xunit
