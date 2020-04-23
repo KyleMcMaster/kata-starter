@@ -1,3 +1,5 @@
+using System;
+using AutoFixture.Idioms;
 using FluentAssertions;
 using Kata.Starter.Fixtures;
 using Xunit;
@@ -6,13 +8,12 @@ namespace Kata.Starter
 {
     public class BillboardTests
     {
-        [Fact]
-        public void Constructor_Returns_Non_Null_Instance()
+        [Theory, AutoDomainData]
+        public void Constructor_Returns_Non_Null_Instance(string message)
         {
-            var sut = new Billboard("");
+            var sut = new Billboard(message);
 
             sut.Should().NotBeNull();
-            sut.Message.Should().BeEmpty();
         }
 
         [Theory, AutoDomainData]
@@ -21,6 +22,22 @@ namespace Kata.Starter
             var sut = new Billboard(message);
 
             sut.Message.Should().Be(message);
+        }
+
+        [Fact]
+        public void Constructor_Inefficiently_Guards_Against_Null_Parameters()
+        {
+            Action nullMessageAction = () => new Billboard(message: null);
+
+            nullMessageAction.Should().Throw<ArgumentNullException>();
+        }
+
+        [Fact]
+        public void Constructor_Guards_Against_Null_Parameters()
+        {
+            var fixture = new DomainFixture();
+            var assertion = new GuardClauseAssertion(fixture);
+            assertion.Verify(typeof(Billboard).GetConstructors());
         }
     }
 }
