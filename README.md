@@ -9,7 +9,7 @@ Kata template for C# .Net Core 3.1 to promote TDD exercises.
 - FluentAssertions
 - xunit
 
-## Running the kata live
+## Running the project
 
 In the kata-starter folder at the same level as the .csproj run the following commands to enable test reruns on change detection.
 
