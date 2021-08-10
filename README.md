@@ -1,6 +1,6 @@
 # kata-starter
 
-Kata template for C# .Net Core 3.1 to promote TDD exercises.
+Kata template for C# and F# .Net Core 3.1 to promote TDD exercises.
 
 ## Packages
 
@@ -11,7 +11,7 @@ Kata template for C# .Net Core 3.1 to promote TDD exercises.
 
 ## Running the project
 
-In the kata-starter folder at the same level as the .csproj run the following commands to enable test reruns on change detection.
+In the csharp or fsharp folder at the same level as the .csproj or .fsproj respectively, run the following commands to restore packages and execute the tests in watch mode.
 
 `dotnet restore`
 
