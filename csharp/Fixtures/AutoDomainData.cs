@@ -10,7 +10,7 @@ namespace Kata.Starter.Fixtures
     public class AutoDomainDataAttribute : AutoDataAttribute
     {
         public AutoDomainDataAttribute()
-            : base(() => new Fixture().Customize(new AutoNSubstituteCustomization()))
+            : base(() => new DomainFixture())
         {
         }
     }
