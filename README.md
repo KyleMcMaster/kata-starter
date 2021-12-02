@@ -7,7 +7,8 @@ Kata template for C# and F# with .Net 6.0 to promote TDD exercises.
 - AutoFixture.AutoNSubstitute
 - AutoFixture.Xunit2
 - FluentAssertions
-- xunit
+- xUnit
+- Ardalis.GuardClauses
 
 ## Running the project
 
