@@ -7,14 +7,14 @@ updates:
     schedule:
       interval: "weekly"
 
-  - package-ecosystem: "nuget-csharp"
+  - package-ecosystem: "nuget"
     # location of package manifests
     directory: "/csharp/"
     open-pull-requests-limit: 10
     schedule:
       interval: "weekly"
       
-  - package-ecosystem: "nuget-fsharp"
+  - package-ecosystem: "nuget"
     # location of package manifests
     directory: "/fsharp/"
     open-pull-requests-limit: 10
