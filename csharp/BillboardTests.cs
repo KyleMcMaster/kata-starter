@@ -27,7 +27,7 @@ namespace Kata.Starter
         [Fact]
         public void Constructor_Inefficiently_Guards_Against_Null_Parameters()
         {
-            Action nullMessageAction = () => new Billboard(message: null);
+            var nullMessageAction = () => new Billboard(message: null);
 
             nullMessageAction.Should().Throw<ArgumentNullException>();
         }

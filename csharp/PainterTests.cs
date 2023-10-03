@@ -10,21 +10,21 @@ namespace Kata.Starter
     {
         [Theory, AutoDomainData]
         public void Constructor_Inefficiently_Guards_Against_Null_Parameters(
-            string firstName, 
-            string lastName, 
+            string firstName,
+            string lastName,
             string socialSecurityNumber)
         {
-            Action nullFirstNameAction = () => new Painter(
+            var nullFirstNameAction = () => new Painter(
                 firstName: null,
                 lastName: lastName,
                 socialSecurityNumber: socialSecurityNumber);
 
-            Action nullLastNameAction = () => new Painter(
+            var nullLastNameAction = () => new Painter(
                 firstName: firstName,
                 lastName: null,
                 socialSecurityNumber: socialSecurityNumber);
 
-            Action nullSocialSecurityNumberAction = () => new Painter(
+            var nullSocialSecurityNumberAction = () => new Painter(
                 firstName: firstName,
                 lastName: lastName,
                 socialSecurityNumber: null);
