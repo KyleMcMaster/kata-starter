@@ -1,23 +1,22 @@
 ﻿using Ardalis.GuardClauses;
 
-namespace Kata.Starter
+namespace Kata.Starter;
+
+public class Billboard
 {
-    public class Billboard
-    {
-        public string Message { get; }
+  public string Message { get; }
 
-        public Billboard(string message)
-        {
-            Guard.Against.NullOrWhiteSpace(message, nameof(message));
+  public Billboard(string message)
+  {
+    Guard.Against.NullOrWhiteSpace(message, nameof(message));
 
-            this.Message = message;
-        }
+    this.Message = message;
+  }
 
-        public Billboard(Billboard original)
-        {
-            Guard.Against.Null(original, nameof(original));
+  public Billboard(Billboard original)
+  {
+    Guard.Against.Null(original, nameof(original));
 
-            this.Message = original.Message;
-        }
-    }
+    this.Message = original.Message;
+  }
 }

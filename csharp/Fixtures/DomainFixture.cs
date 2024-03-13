@@ -1,11 +1,10 @@
 ﻿using AutoFixture;
 using AutoFixture.AutoNSubstitute;
 
-namespace Kata.Starter.Fixtures
+namespace Kata.Starter.Fixtures;
+
+public class DomainFixture : Fixture
 {
-    public class DomainFixture : Fixture
-    {
-        public DomainFixture() : base() =>
-            Customize(new AutoNSubstituteCustomization());
-    }
+  public DomainFixture() : base() =>
+      Customize(new AutoNSubstituteCustomization());
 }
