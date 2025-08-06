@@ -1,6 +1,6 @@
 using System;
 using AutoFixture.Idioms;
-using FluentAssertions;
+using Shouldly;
 using Kata.Starter.Fixtures;
 using Xunit;
 
@@ -13,7 +13,7 @@ public class BillboardTests
   {
     var sut = new Billboard(message);
 
-    sut.Should().NotBeNull();
+    sut.ShouldNotBeNull();
   }
 
   [Theory, AutoDomainData]
@@ -21,7 +21,7 @@ public class BillboardTests
   {
     var sut = new Billboard(message);
 
-    sut.Message.Should().Be(message);
+    sut.Message.ShouldBe(message);
   }
 
   [Fact]
@@ -29,7 +29,7 @@ public class BillboardTests
   {
     var nullMessageAction = () => new Billboard(message: null);
 
-    nullMessageAction.Should().Throw<ArgumentNullException>();
+    nullMessageAction.ShouldThrow<ArgumentNullException>();
   }
 
   [Fact]

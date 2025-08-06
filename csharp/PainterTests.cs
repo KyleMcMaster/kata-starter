@@ -1,6 +1,6 @@
 ﻿using System;
 using AutoFixture.Idioms;
-using FluentAssertions;
+using Shouldly;
 using Kata.Starter.Fixtures;
 using Xunit;
 
@@ -29,9 +29,9 @@ public class PainterTests
         lastName: lastName,
         socialSecurityNumber: null);
 
-    nullFirstNameAction.Should().Throw<ArgumentNullException>();
-    nullLastNameAction.Should().Throw<ArgumentNullException>();
-    nullSocialSecurityNumberAction.Should().Throw<ArgumentNullException>();
+    nullFirstNameAction.ShouldThrow<ArgumentNullException>();
+    nullLastNameAction.ShouldThrow<ArgumentNullException>();
+    nullSocialSecurityNumberAction.ShouldThrow<ArgumentNullException>();
   }
 
   [Fact]
