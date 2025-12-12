@@ -1,6 +1,6 @@
 # kata-starter
 
-Kata template for C# and F# with .NET 8.0 to promote TDD exercises.
+Kata template for C# and F# with .NET 10.0 to promote TDD exercises.
 
 ## Packages
 
